@@ -1,6 +1,6 @@
 # 필기 지우개 (Handwriting Eraser) — support & privacy
 
-App Store 가 요구하는 지원 URL 과 개인정보 처리방침 URL 용 정적 페이지.
+App Store·Google Play 가 요구하는 지원 URL 과 개인정보 처리방침 URL 용 정적 페이지 (iPhone·안드로이드 공용).
 
 - 고객 지원: https://seungbinbaik.github.io/handwriting-eraser-support/
 - 개인정보 처리방침: https://seungbinbaik.github.io/handwriting-eraser-support/privacy.html
