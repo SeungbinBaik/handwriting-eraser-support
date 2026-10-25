@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>필기 지우개 · 틀린 문제 다시 풀기</title>
+<meta name="description" content="문제집 사진에서 연필·색펜 필기를 지우고, 틀린 문제를 오답 노트에 담아 다시 풀어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="필기 지우개 · 틀린 문제 다시 풀기">
+<meta property="og:description" content="문제집 필기를 지우고, 틀린 문제를 다시 풀어요.">
+<meta property="og:image" content="https://eraser.edureserve.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{--paper:#F5F4F0;--card:#FFFFFF;--ink:#15171C;--dim:rgba(21,23,28,.62);--rule:rgba(21,23,28,.10);--blue:#0A66E0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;word-break:keep-all}
+.wrap{max-width:30rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+.hero{width:100%;display:block;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.card{background:var(--card);border-radius:18px;padding:1.4rem 1.2rem;margin:1.2rem 0;text-align:center}
+.lead{font-size:1.35rem;font-weight:700;margin:.2rem 0 .5rem}
+.sub{color:var(--dim);margin:0 0 .4rem}
+.btn{display:block;margin:.8rem auto 0;max-width:20rem;padding:.9rem 1rem;border-radius:999px;color:#fff;background:var(--blue);font-weight:700;text-decoration:none;font-size:1.05rem}
+.btn.store{background:var(--ink)}
+.hide{display:none}
+.muted{color:var(--dim);font-size:.9rem}
+footer{margin-top:2rem;color:var(--dim);font-size:.88rem;text-align:center}
+footer a{color:inherit}
+@media (prefers-color-scheme:dark){:root{--paper:#0F1013;--card:#18191D;--ink:#F2F2F4;--dim:rgba(255,255,255,.6);--rule:rgba(255,255,255,.12);--blue:#4A9AFF}.btn.store{background:#2A2C30}}
+</style>
+</head><body><div class="wrap">
+<!-- 친구에게 알려 주기·자랑하기 링크의 안내 페이지 — 기기에 맞는 스토어로만 보낸다 (앱이 있으면 스토어에 '열기'). 링크에 사람 정보는 없다. -->
+<img class="hero" id="hero" src="../img/og.png" alt="필기 지우개 앱 아이콘과 필통 친구들: 지우개, 연필, 포스트잇, 빨간 연필, 자, 형광펜, 연필깎이">
+<div class="card">
+  <p class="lead" id="lead">문제집 필기를 지우고, 틀린 문제를 다시 풀어요</p>
+  <p class="sub" id="ask">사진 한 장으로 연필·색펜 필기를 지워 깨끗한 문제지로 다시 인쇄해요. 틀린 문제는 오답 노트에 담아 매일 다시 풀고, 필통 친구들을 모아요.</p>
+  <a class="btn" id="go" href="#">앱 받으러 가기</a>
+  <a class="btn store hide" id="ios" href="https://apps.apple.com/kr/app/id6814660045">App Store</a>
+  <a class="btn store hide" id="android" href="https://play.google.com/store/apps/details?id=dev.seungbin.handwritingremover&amp;referrer=utm_source%3Dinvite%26utm_medium%3Dshare%26utm_campaign%3Dapp">Google Play</a>
+  <p class="muted hide" id="pc">휴대폰에서 이 링크를 열어 주세요.</p>
+</div>
+<footer><a href="../" id="support">고객 지원</a> · <a href="../privacy.html" id="privacy">개인정보 처리방침</a> · <a href="../terms.html" id="terms">이용약관</a></footer>
+</div>
+<script>
+  // 기기는 브라우저가 알려 주는 User-Agent 로, 어디서 공유했는지(?c=friends 등)는 Play 유입 표시(utm_campaign)로만 쓴다.
+  (function () {
+    if (!/^ko/i.test(navigator.language || "ko")) {
+      var T = { lead: "Erase handwriting from workbooks and re-solve the problems you missed",
+                ask: "Erase pencil and colored-pen marks from a photo and print a clean sheet again. Save missed problems to your wrong-answer notebook, re-solve a few every day, and collect pencil case pals.",
+                go: "Get the app", pc: "Please open this link on your phone.", support: "Support", privacy: "Privacy Policy", terms: "Terms of Use" };
+      document.documentElement.lang = "en";
+      document.title = "Handwriting Eraser · Re-solve missed problems";
+      Object.keys(T).forEach(function (id) { document.getElementById(id).textContent = T[id]; });
+    }
+    var c = (new URLSearchParams(location.search).get("c") || "app").toLowerCase();
+    if (!/^[a-z]{1,16}$/.test(c)) c = "app";
+    var play = document.getElementById("android");
+    play.href = play.href.replace("utm_campaign%3Dapp", "utm_campaign%3D" + c);
+    var ua = navigator.userAgent || "";
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var android = /Android/.test(ua);
+    var go = document.getElementById("go");
+    if (ios) {
+      go.href = document.getElementById("ios").href;
+    } else if (android) {
+      go.href = play.href;
+    } else {
+      go.classList.add("hide");
+      document.getElementById("ios").classList.remove("hide");
+      play.classList.remove("hide");
+      document.getElementById("pc").classList.remove("hide");
+    }
+  })();
+</script>
+</body></html>
