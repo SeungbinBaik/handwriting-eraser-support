@@ -15,6 +15,9 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);
  font:16px/1.7 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;word-break:keep-all}
+ /* 일본어·중국어는 띄어쓰기가 없어 keep-all 이면 줄이 안 바뀌고 카드 밖으로 넘친다 (지원 페이지와 같은 규칙) */
+ :lang(ja){word-break:normal;line-break:strict;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
+ :lang(zh-Hant){word-break:normal;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
 .wrap{max-width:30rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
 .hero{width:100%;display:block;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .card{background:var(--card);border-radius:18px;padding:1.4rem 1.2rem;margin:1.2rem 0;text-align:center}
@@ -35,7 +38,7 @@ footer a{color:inherit}
   <p class="lead" id="lead">문제집 필기를 지우고, 틀린 문제를 다시 풀어요</p>
   <p class="sub" id="ask">사진 한 장으로 연필·색펜 필기를 지워 깨끗한 문제지로 다시 인쇄해요. 틀린 문제는 오답 노트에 담아 매일 다시 풀고, 필통 친구들을 모아요.</p>
   <a class="btn" id="go" href="#">앱 받으러 가기</a>
-  <a class="btn store hide" id="ios" href="https://apps.apple.com/kr/app/id6814660045">App Store</a>
+  <a class="btn store hide" id="ios" href="https://apps.apple.com/app/id6814660045">App Store</a>
   <a class="btn store hide" id="android" href="https://play.google.com/store/apps/details?id=dev.seungbin.handwritingremover&amp;referrer=utm_source%3Dinvite%26utm_medium%3Dshare%26utm_campaign%3Dapp">Google Play</a>
   <p class="muted hide" id="pc">휴대폰에서 이 링크를 열어 주세요.</p>
 </div>
@@ -44,13 +47,23 @@ footer a{color:inherit}
 <script>
   // 기기는 브라우저가 알려 주는 User-Agent 로, 어디서 공유했는지(?c=friends 등)는 Play 유입 표시(utm_campaign)로만 쓴다.
   (function () {
-    if (!/^ko/i.test(navigator.language || "ko")) {
-      var T = { lead: "Erase handwriting from workbooks and re-solve the problems you missed",
-                ask: "Erase pencil and colored-pen marks from a photo and print a clean sheet again. Save missed problems to your wrong-answer notebook, re-solve a few every day, and collect pencil case pals.",
-                go: "Get the app", pc: "Please open this link on your phone.", support: "Support", privacy: "Privacy Policy", terms: "Terms of Use" };
-      document.documentElement.lang = "en";
-      document.title = "Handwriting Eraser · Re-solve missed problems";
-      Object.keys(T).forEach(function (id) { document.getElementById(id).textContent = T[id]; });
+    // 한국어가 아니면 그 언어로 (일본어·번체 중국어·그 밖 = 영어)
+    var lang = (navigator.language || "ko").toLowerCase();
+    var L = {
+      en: { lang: "en", title: "Handwriting Eraser · Re-solve missed problems",
+            t: { lead: "Erase handwriting from workbooks and re-solve the problems you missed",
+                 ask: "Erase pencil and colored-pen marks from a photo and print a clean sheet again. Save missed problems to your wrong-answer notebook, re-solve a few every day, and collect pencil case pals.",
+                 go: "Get the app", pc: "Please open this link on your phone.", support: "Support", privacy: "Privacy Policy", terms: "Terms of Use" } },
+      ja: { lang: "ja", title: "手書き消しゴム・まちがえた問題を解き直し", t: {"lead": "問題集の書き込みを消して、まちがえた問題を解き直そう", "ask": "写真1枚で鉛筆・色ペンの書き込みを消して、きれいなプリントとして印刷し直せます。まちがえた問題はまちがいノートに入れて毎日解き直し、ふでばこのなかまを集めましょう。", "go": "アプリを入手", "pc": "スマートフォンでこのリンクを開いてください。", "support": "サポート", "privacy": "プライバシーポリシー", "terms": "利用規約"} },
+      zh: { lang: "zh-Hant", title: "手寫橡皮擦 · 重練錯題", t: {"lead": "擦掉習題上的筆跡，重練做錯的題目", "ask": "用一張照片擦掉鉛筆和彩色筆的筆跡，重新列印成乾淨的習題。錯題加入錯題本每天重練，還能收集鉛筆盒朋友。", "go": "前往下載 App", "pc": "請用手機打開這個連結。", "support": "客服支援", "privacy": "隱私權政策", "terms": "使用條款"} }
+    };
+    var pick = /^ko/.test(lang) ? null : /^ja/.test(lang) ? L.ja : /^zh/.test(lang) ? L.zh : L.en;
+    if (pick) {
+      document.documentElement.lang = pick.lang;
+      document.title = pick.title;
+      Object.keys(pick.t).forEach(function (id) { document.getElementById(id).textContent = pick.t[id]; });
+      var sec = pick.lang === "zh-Hant" ? "zh-Hant" : pick.lang;
+      ["privacy", "terms"].forEach(function (id) { var a = document.getElementById(id); a.href = a.href.split("#")[0] + "#" + sec; });
     }
     var c = (new URLSearchParams(location.search).get("c") || "app").toLowerCase();
     if (!/^[a-z]{1,16}$/.test(c)) c = "app";

@@ -28,10 +28,13 @@ footer a{color:inherit}
 @media (prefers-color-scheme:dark){:root{--paper:#0F1013;--card:#18191D;--ink:#F2F2F4;--dim:rgba(255,255,255,.6);--rule:rgba(255,255,255,.12);--blue:#4A9AFF}}
 .card{background:var(--card);border-radius:14px;padding:1.1rem 1.25rem;margin:0 0 1rem}
 .btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;border-radius:10px;padding:.6rem 1rem;font-weight:600}
+:lang(en){word-break:normal}
+:lang(ja){word-break:normal;line-break:strict;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
+:lang(zh-Hant){word-break:normal;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
 </style>
 </head><body><div class="wrap">
 <header><img src="icon.png" alt=""><div><h1>필기 지우개</h1><p class="sub">계정 삭제 · Account deletion</p><p class="sub">Handwriting Eraser · 개발자 Seungbin Baik</p></div></header>
-<nav><a href="#ko">한국어</a><a href="#en">English</a><a href="./">고객 지원</a><a href="privacy.html">개인정보 처리방침</a></nav>
+<nav><a href="#ko">한국어</a><a href="#en">English</a><a href="#ja">日本語</a><a href="#zh-Hant">繁體中文</a><a href="./">고객 지원</a><a href="privacy.html">개인정보 처리방침</a></nav>
 <section id="ko" lang="ko">
 <h2>내 필통 기록 로그인 백업 계정 삭제</h2>
 <p class="q">앱에서 바로 지우기 (권장)</p>
@@ -92,5 +95,69 @@ footer a{color:inherit}
 <li>If you can't use the app: email <a href="mailto:seungbin.baik@gmail.com?subject=Handwriting%20Eraser%20progress%20deletion">seungbin.baik@gmail.com</a> with the same details as above and "delete my progress only". We delete all progress on the server within 10 days and let you know.</li>
 </ul>
 </section>
+<section id="ja" lang="ja">
+<h2>マイふでばこのサインインバックアップ：アカウントの削除</h2>
+<p class="q">アプリからすぐに削除する（おすすめ）</p>
+<ol>
+<li>手書き消しゴムアプリの<strong>設定 › マイふでばこの記録</strong>を開きます。</li>
+<li><strong>アカウントを削除</strong>を押し、同じアカウントでもう一度サインインして確認します。</li>
+<li>サーバーのアカウントとすべての記録がすぐに削除されます。このスマートフォンの中の記録はそのまま残ります。</li>
+</ol>
+<p class="q">アプリを使えないとき — メールでリクエスト</p>
+<div class="card">
+<p>下記の内容を書いて、<a href="mailto:seungbin.baik@gmail.com?subject=%E6%89%8B%E6%9B%B8%E3%81%8D%E6%B6%88%E3%81%97%E3%82%B4%E3%83%A0%20%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E5%89%8A%E9%99%A4%20/%20Handwriting%20Eraser%20account%20deletion">seungbin.baik@gmail.com</a>までお送りください。</p>
+<ul>
+<li>サインイン方法（AppleまたはGoogle）</li>
+<li>アカウント番号（アプリの設定 › マイふでばこの記録のいちばん下にある8桁）、またはGoogleでサインインしたメールアドレス</li>
+</ul>
+<p><a class="btn" href="mailto:seungbin.baik@gmail.com?subject=%E6%89%8B%E6%9B%B8%E3%81%8D%E6%B6%88%E3%81%97%E3%82%B4%E3%83%A0%20%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E5%89%8A%E9%99%A4%20/%20Handwriting%20Eraser%20account%20deletion">削除リクエストのメールを書く</a></p>
+<p>アカウントの持ち主であることを確認したうえで10日以内に削除し、結果を返信でお知らせします。確認のため、サインインしたアカウントのメールアドレスから送っていただくと早く対応できます。</p>
+</div>
+<p class="q">削除されるものと残るもの</p>
+<ul>
+<li>削除されるもの：アカウント（アカウント番号、サインイン方法、メールアドレス、Googleでのサインインの名前・プロフィール写真のアドレス）、サーバーにあるマイふでばこの記録のすべて。別に保管しているコピーはありません。</li>
+<li>残るもの：スマートフォンの中のアプリのデータ（写真、まちがいノート、マイふでばこの記録）— アプリを削除すると一緒に削除されます。サブスクリプションはApple・Googleが管理しているため、アカウントの削除とは関係なく、ストアで解約してください。</li>
+<li>匿名の製品改善の統計は、個人ごとに分けられない月ごとの合計のため、アカウントとはつながっていません。</li>
+</ul>
+<p class="q" id="data-ja">アカウントは残して記録だけを削除する</p>
+<ul>
+<li>アプリから：設定 › マイふでばこの記録 › <strong>この記録を削除</strong>を押すと、サーバーにあるこの記録がすぐに削除されます。アカウントとこのスマートフォンの記録はそのまま残ります。</li>
+<li>アプリを使えない場合：上記と同じ内容（サインイン方法、アカウント番号またはGoogleでサインインしたメールアドレス）に「記録だけを削除してください」と書いて、<a href="mailto:seungbin.baik@gmail.com?subject=%E6%89%8B%E6%9B%B8%E3%81%8D%E6%B6%88%E3%81%97%E3%82%B4%E3%83%A0%20%E8%A8%98%E9%8C%B2%E3%81%AE%E5%89%8A%E9%99%A4%20/%20Handwriting%20Eraser%20progress%20deletion">seungbin.baik@gmail.com</a>までお送りください。10日以内にサーバーの記録をすべて削除し、お知らせします。</li>
+</ul>
+</section>
+<section id="zh-Hant" lang="zh-Hant">
+<h2>刪除鉛筆盒紀錄登入備份帳號</h2>
+<p class="q">在 App 中直接刪除（建議）</p>
+<ol>
+<li>打開手寫橡皮擦 App 的<strong>設定 › 我的鉛筆盒紀錄</strong>。</li>
+<li>按<strong>刪除帳號</strong>，再用相同的帳號重新登入確認。</li>
+<li>伺服器上的帳號和所有紀錄會立即刪除。這支手機上的紀錄會保留。</li>
+</ol>
+<p class="q">無法使用 App 時 — 用電子郵件申請</p>
+<div class="card">
+<p>請寫下以下內容，寄到 <a href="mailto:seungbin.baik@gmail.com?subject=%E6%89%8B%E5%AF%AB%E6%A9%A1%E7%9A%AE%E6%93%A6%20%E5%B8%B3%E8%99%9F%E5%88%AA%E9%99%A4%E8%AB%8B%E6%B1%82%20/%20Handwriting%20Eraser%20account%20deletion">seungbin.baik@gmail.com</a>。</p>
+<ul>
+<li>登入方式（Apple 或 Google）</li>
+<li>帳號編號（App 的設定 › 我的鉛筆盒紀錄最下方的 8 碼）或 Google 登入的電子郵件</li>
+</ul>
+<p><a class="btn" href="mailto:seungbin.baik@gmail.com?subject=%E6%89%8B%E5%AF%AB%E6%A9%A1%E7%9A%AE%E6%93%A6%20%E5%B8%B3%E8%99%9F%E5%88%AA%E9%99%A4%E8%AB%8B%E6%B1%82%20/%20Handwriting%20Eraser%20account%20deletion">撰寫刪除請求郵件</a></p>
+<p>確認你是帳號擁有者後，我們會在 10 天內刪除，並回信通知結果。從登入帳號的電子郵件寄出，可以更快完成確認。</p>
+</div>
+<p class="q">會刪除的內容與會保留的內容</p>
+<ul>
+<li>會刪除的內容：帳號（帳號編號、登入方式、電子郵件、Google 登入的姓名和大頭貼網址），以及伺服器上所有的鉛筆盒紀錄。不另外保留副本。</li>
+<li>會保留的內容：手機上的 App 資料（照片、錯題本、我的鉛筆盒紀錄）— 刪除 App 時會一起刪除。訂閱由 Apple 和 Google 管理，與刪除帳號無關，請另外到商店取消。</li>
+<li>匿名的產品改善統計是無法按個人區分的每月總數，與帳號沒有連結。</li>
+</ul>
+<p class="q" id="data-zh-Hant">保留帳號，只刪除紀錄</p>
+<ul>
+<li>在 App 中：按設定 › 我的鉛筆盒紀錄 › <strong>刪除這份紀錄</strong>，伺服器上的這份紀錄就會立即刪除。帳號和這支手機上的紀錄會保留。</li>
+<li>無法使用 App 時：請寫下和上方相同的內容（登入方式、帳號編號或 Google 登入的電子郵件），並註明「只刪除紀錄」，寄到 <a href="mailto:seungbin.baik@gmail.com?subject=%E6%89%8B%E5%AF%AB%E6%A9%A1%E7%9A%AE%E6%93%A6%20%E7%B4%80%E9%8C%84%E5%88%AA%E9%99%A4%E8%AB%8B%E6%B1%82%20/%20Handwriting%20Eraser%20progress%20deletion">seungbin.baik@gmail.com</a>。我們會在 10 天內刪除伺服器上的所有紀錄並通知你。</li>
+</ul>
+</section>
 <footer><p><a href="./">고객 지원 · Support</a> · <a href="privacy.html">개인정보 처리방침 · Privacy</a> · <a href="terms.html">이용약관 · Terms</a></p></footer>
-</div></body></html>
+</div><script>
+// 주소에 #언어가 없으면 브라우저 언어의 절로 (일본어·중국어·그 밖의 언어 = 영어). 한국어는 맨 위 그대로.
+(function(){if(location.hash)return;var l=(navigator.language||"").toLowerCase(),t=l.indexOf("ja")===0?"ja":l.indexOf("zh")===0?"zh-Hant":l.indexOf("ko")===0?"":"en";var e=t&&document.getElementById(t);if(e)e.scrollIntoView();})();
+</script>
+</body></html>

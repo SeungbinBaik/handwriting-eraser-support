@@ -26,10 +26,13 @@ a{color:var(--blue)}
 footer{margin-top:4rem;padding-top:1.4rem;border-top:1px solid var(--rule);color:var(--dim);font-size:.88rem}
 footer a{color:inherit}
 @media (prefers-color-scheme:dark){:root{--paper:#0F1013;--card:#18191D;--ink:#F2F2F4;--dim:rgba(255,255,255,.6);--rule:rgba(255,255,255,.12);--blue:#4A9AFF}}
+:lang(en){word-break:normal}
+:lang(ja){word-break:normal;line-break:strict;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
+:lang(zh-Hant){word-break:normal;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
 </style>
 </head><body><div class="wrap">
 <header><img src="icon.png" alt=""><div><h1>필기 지우개</h1><p class="sub">개인정보 처리방침 · Privacy Policy</p><p class="sub">시행일 2026년 11월 2일 · Effective November 2, 2026</p></div></header>
-<nav><a href="#ko">한국어</a><a href="#en">English</a><a href="./">고객 지원</a><a href="terms.html">이용약관</a></nav>
+<nav><a href="#ko">한국어</a><a href="#en">English</a><a href="#ja">日本語</a><a href="#zh-Hant">繁體中文</a><a href="./">고객 지원</a><a href="terms.html">이용약관</a></nav>
 
 <section id="ko" lang="ko">
 <h2>개인정보 처리방침</h2>
@@ -43,7 +46,7 @@ footer a{color:inherit}
 <p class="q">제품 개선 통계</p>
 <p>앱과 무료 장 수, 구독 안내를 개선하기 위해 아래 항목의 <strong>횟수만</strong> 월별로 더해요.</p>
 <ul>
-<li>보내는 것: 앱 종류(iOS·안드로이드), 일이 일어난 달, 처음 통계를 시작할 때의 무료 사용량 구간(0장·1~3장·4~9장·소진), 단계(시작, 첫 성공, 3장·10장 도달, 소진 후 새 처리 시도, 구독 화면 표시, 구독 버튼 누름, 인쇄·공유·저장, 편집, 오답 노트 담기, 오늘의 문제 마침, 다시 열기, 다시 와서 지우기나 오늘의 문제 마침), 그 순간의 무료 사용량 구간, 처음 시작한 날부터 며칠째인지의 구간(24시간 안·1~2일·3~7일·8~30일·31일 이상), 직접 고른 사용자 유형(누가: 부모, 학생, 선생님·강사, 그 밖 / 어느 공부: 초등, 중등, 고등, 대학·자격증 / 고르지 않음). 각 단계는 한 번씩만 세고, 다시 열기와 다시 와서 쓰기는 며칠째 구간마다 한 번 세요.</li>
+<li>보내는 것: 앱 종류(iOS·안드로이드), 일이 일어난 달, 처음 통계를 시작할 때의 무료 사용량 구간(0장·1~3장·4~9장·소진), 단계(시작, 첫 성공, 3장·10장 도달, 소진 후 새 처리 시도, 구독 화면 표시, 구독 버튼 누름, 인쇄·공유·저장, 편집, 오답 노트 담기, 오늘의 문제 마침, 바로 풀기, 오늘의 문제 알림 켜짐, 다시 열기, 다시 와서 지우기나 오늘의 문제 마침이나 바로 풀기), 그 순간의 무료 사용량 구간, 처음 시작한 날부터 며칠째인지의 구간(24시간 안·1~2일·3~7일·8~30일·31일 이상), 직접 고른 사용자 유형(누가: 부모, 학생, 선생님·강사, 그 밖 / 어느 공부: 초등, 중등, 고등, 대학·자격증 / 고르지 않음). 각 단계는 한 번씩만 세고, 다시 열기와 다시 와서 쓰기는 며칠째 구간마다 한 번 세요.</li>
 <li>보내지 않는 것: 이름·이메일·기기·광고·설치 식별자, 사진·필기·문서 내용, 결제 영수증, 달보다 자세한 날짜와 시각. 처음 시작한 날은 기기에만 저장해요.</li>
 <li>고른 유형: 답은 기기에 두고, 통계에는 위의 유형 칸으로만 더해요. 앱의 설정 › 제품 개선에서 언제든 바꿀 수 있어요.</li>
 <li>처리: Google Firebase(Cloud Firestore 서울 리전)에 공통 카운터로만 더해요. 통계 조작을 막는 앱 검증(Firebase App Check, Apple App Attest·Google Play Integrity)에서 Apple과 Google이 검증 자료와 IP 주소 등 통신 정보를 처리하며, 이 처리는 국외에서 이뤄질 수 있어요.</li>
@@ -130,7 +133,7 @@ footer a{color:inherit}
 <p class="q">Product-improvement statistics</p>
 <p>To improve the app, the free allowance and subscription guidance, we only add up <strong>counts</strong> per month.</p>
 <ul>
-<li>Sent: the app type (iOS or Android), the month it happened, the free-page band when statistics first started (0, 1–3, 4–9, used up), the stage (start, first success, reaching 3 and 10 pages, trying a new page after the free pages are used up, seeing the subscription screen, tapping subscribe, printing, sharing or saving, editing, adding to the wrong-answer note, finishing today's problems, opening the app again, coming back to erase or finish today's problems), the free-page band at that moment, the days since statistics first started (within the first 24 hours, 1–2, 3–7, 8–30, 31 or more), and the user type you chose yourself (parent, student, teacher or tutor, other; elementary, middle school, high school, college or exams; not chosen). Each stage is counted once; opening again and coming back to use are counted once per day band.</li>
+<li>Sent: the app type (iOS or Android), the month it happened, the free-page band when statistics first started (0, 1–3, 4–9, used up), the stage (start, first success, reaching 3 and 10 pages, trying a new page after the free pages are used up, seeing the subscription screen, tapping subscribe, printing, sharing or saving, editing, adding to the wrong-answer note, finishing today's problems, solving on screen, turning on reminders for today's problems, opening the app again, coming back to erase, finish today's problems or solve on screen), the free-page band at that moment, the days since statistics first started (within the first 24 hours, 1–2, 3–7, 8–30, 31 or more), and the user type you chose yourself (parent, student, teacher or tutor, other; elementary, middle school, high school, college or exams; not chosen). Each stage is counted once; opening again and coming back to use are counted once per day band.</li>
 <li>Never sent: names, emails, device, advertising or install identifiers, photos, handwriting or document content, payment receipts, or any date or time finer than the month. The first-start day stays on the device.</li>
 <li>Chosen type: your answer stays on the device and is added to the counts only as the type above. Change it any time in Settings › Product improvement.</li>
 <li>Processing: counts are added to shared counters in Google Firebase (Cloud Firestore, Seoul region). App verification against tampering (Firebase App Check with Apple App Attest or Google Play Integrity) means Apple and Google process verification data and connection information such as IP addresses, possibly outside Korea.</li>
@@ -203,5 +206,181 @@ footer a{color:inherit}
 <p class="q">Contact</p>
 <p><a href="mailto:seungbin.baik@gmail.com">seungbin.baik@gmail.com</a></p>
 </section>
+<section id="ja" lang="ja">
+<h2>プライバシーポリシー</h2>
+<p class="q">概要</p>
+<p>会員登録なしですべての機能を使えます。写真と書き込みは端末の外に出ません。端末の外に出るのは、次の3つです。</p>
+<ul>
+<li><strong>製品改善の統計</strong>：個人を特定できない月ごとの合計。設定でオフにできます。</li>
+<li><strong>マイふでばこのサインインバックアップ（任意）</strong>：ご自身でサインインしたときだけ、アカウント番号、メールアドレス（Googleでサインインした場合）、マイふでばこの記録を送ります。</li>
+<li><strong>お問い合わせ</strong>：設定 › お問い合わせからご自身で送ったときだけ、お問い合わせの内容、返信用のメールアドレス、アプリ・端末の情報を送ります。</li>
+</ul>
+<p class="q">製品改善の統計</p>
+<p>アプリと無料枚数、サブスクリプションの案内を改善するため、下記の項目の<strong>回数だけ</strong>を月ごとに合計します。</p>
+<ul>
+<li>送るもの：アプリの種類（iOS・Android）、出来事が起きた月、統計を初めて開始したときの無料利用量の区分（0枚・1〜3枚・4〜9枚・使い切り）、ステップ（開始、初めての成功、3枚・10枚への到達、使い切ったあとの新しい処理の試み、サブスクリプション画面の表示、登録ボタンのタップ、印刷・共有・保存、手直し、まちがいノートへの追加、今日の解き直しの完了、画面で解く、今日の解き直しの通知オン、再度の起動、戻ってきての消去・今日の解き直しの完了・画面で解く）、その時点の無料利用量の区分、初めて開始した日から何日目かの区分（24時間以内・1〜2日・3〜7日・8〜30日・31日以上）、ご自身で選んだユーザーの種類（誰が：保護者、学生、先生・講師、その他／どの学習：小学校、中学校、高校、大学・資格／選択なし）。各ステップは1回だけ数え、再度の起動と戻ってきての利用は、何日目かの区分ごとに1回数えます。</li>
+<li>送らないもの：名前・メールアドレス・端末・広告・インストールの識別子、写真・書き込み・文書の内容、決済のレシート、月より細かい日付と時刻。初めて開始した日は端末にだけ保存します。</li>
+<li>選んだ種類：回答は端末に置き、統計には上記の種類の欄としてだけ合計します。アプリの設定 › 製品の改善から、いつでも変更できます。</li>
+<li>処理：Google Firebase（Cloud Firestore ソウルリージョン）に、共通のカウンターとしてのみ加算します。統計の改ざんを防ぐアプリの検証（Firebase App Check、Apple App Attest・Google Play Integrity）では、AppleとGoogleが検証資料とIPアドレスなどの通信情報を処理し、この処理は韓国国外で行われることがあります。</li>
+<li>オフにする：アプリの設定 › アプリ情報 › 製品の改善から、いつでもオフにできます。欧州連合・欧州経済領域・英国・スイスのストアから入手したアプリでは、最初からオフになっています（<a href="#eu-ja">下記</a>）。オフにすると、まだ送っていない記録はすぐに削除し、アプリの機能はそのまま使えます。サブスクリプションの登録中は送りません。</li>
+<li>時刻：サーバーには月ごとの合計と、その合計が最後に変わった時刻だけが残ります。アプリは、初めて開始してから24時間以内の記録と、再度起動したり戻ってきて使ったりした記録は早ければ1〜3分後に、その他の記録は数時間から数日後にランダムに送ります。サーバーに残る変更時刻には、個人を特定できる情報はありません。</li>
+<li>保管：月ごとの合計には個人を特定できる情報はなく、サービスを運営している間は保管し、不要になった月は削除します。送れなかった記録は、端末で30日が過ぎると削除します。</li>
+</ul>
+<p class="q" id="backup-ja">マイふでばこのサインインバックアップ — 個人情報の収集・利用に関する案内（任意）</p>
+<p>スマートフォンを変えたりアプリを再インストールしたりしてもマイふでばこの記録を引き継げるよう、<strong>ご自身でサインインしたときだけ</strong>下記の情報を処理します。サインインしなければ何も送らず、アプリのほかの機能はそのまま使えます。</p>
+<ul>
+<li>処理の目的：マイふでばこの記録のバックアップと復元、同じアカウントの記録の統合、アカウント削除のリクエストへの対応。</li>
+<li>処理する項目：アカウント番号（サインインサービスが作る識別子）、サインイン方法（Apple・Google）、Googleでサインインした場合のメールアドレス、マイふでばこの記録（スタンプをもらった日、連続が途切れた日、ふでばこのなかま、解き直した問題と克服した問題の数、最長の連続、記録を作成・変更した時刻）。Googleでのサインインでは名前とプロフィール写真のアドレスが一緒に届くことがありますが、使いません。Appleでサインインした場合、メールアドレスと名前は受け取りません。</li>
+<li>送らないもの：写真、書き込み、まちがいノートの問題、決済情報、無料枚数、生まれた年と月。</li>
+<li>処理の根拠：利用者が求めたバックアップ機能を提供するのに必要な範囲（韓国の個人情報保護法（개인정보 보호법）第15条第1項第4号）で処理します。サインインのときに、この案内を確認していただきます。</li>
+<li>年齢：14歳以上の方だけが使えます。サインインの前に生まれた年と月で確認し、その値は保存しません。14歳未満の方の個人情報は受け取りません。</li>
+<li>保有期間：アカウントを削除するまで。アカウントを削除すると、サーバーのアカウントと記録をすぐに削除し、別のバックアップコピーは残しません。</li>
+</ul>
+<p class="q">処理の委託と国外への移転</p>
+<p>サインインバックアップはGoogleのFirebaseで運営しています。アカウント情報の一部は米国で処理されます。</p>
+<ul>
+<li>受け取る者：Google LLC（お問い合わせ：<a href="https://support.google.com/policies/contact/general_privacy_form">Googleのプライバシーに関するお問い合わせ</a>）</li>
+<li>委託する業務と場所：サインインとアカウントの管理（Firebase Authentication、米国）、マイふでばこの記録の保管（Cloud Firestore、ソウルリージョン）</li>
+<li>移転する項目：アカウント番号、サインイン方法、メールアドレス（Googleでサインインした場合）、Googleでのサインインで届く名前・プロフィール写真のアドレス、マイふでばこの記録</li>
+<li>時期と方法：サインインとバックアップのときに、暗号化されたインターネット通信（HTTPS）で</li>
+<li>保有期間：アカウントを削除するまで</li>
+<li>拒否する方法：サインインしないか、アカウントを削除してください。その場合、記録のバックアップだけが使えなくなり、ほかの機能はそのまま使えます。</li>
+<li>正規アプリの確認：統計とバックアップの改ざんを防ぐため、Firebase App Check（Apple App Attest・Google Play Integrity）を使います。Apple Inc.とGoogle LLCが検証資料とIPアドレスなどの通信情報を処理し、韓国国外で処理されることがあります。</li>
+</ul>
+<p class="q" id="contact-ja">お問い合わせ</p>
+<p>アプリの設定 › お問い合わせからご自身で送ったときだけ、下記の情報を処理します。</p>
+<ul>
+<li>処理の目的：お問い合わせへの回答、不具合の確認と解決。</li>
+<li>処理する項目：お問い合わせの内容、返信用のメールアドレス（残した場合）、アプリのバージョン、端末のモデル、OSのバージョン。メールでお問い合わせいただいた場合は、送信元のメールアドレスとメールの内容。</li>
+<li>処理の根拠：利用者が送ったお問い合わせに回答するのに必要な範囲（韓国の個人情報保護法（개인정보 보호법）第15条第1項第4号）。</li>
+<li>処理の経路と国外への移転：正規アプリの確認（Firebase App Check）を経て、下記の順に送ります。送るときは暗号化された通信（HTTPS）を使います。お問い合わせの中継サーバーには保存しません。
+  <ul>
+  <li>Cloudflare, Inc.（米国）— お問い合わせの中継。送信が多すぎるのを防ぐため、IPアドレスを一時的に使います。お問い合わせ：<a href="https://www.cloudflare.com/privacypolicy/">Cloudflareのプライバシーポリシー</a></li>
+  <li>Plus Five Five, Inc.（Resend、米国）— メールの送信。送信の記録を同社のポリシーに従って保管することがあります。お問い合わせ：support@resend.com</li>
+  <li>Google LLC（Gmail、米国）— 開発者のメールボックス。お問い合わせ：<a href="https://support.google.com/policies/contact/general_privacy_form">Googleのプライバシーに関するお問い合わせ</a></li>
+  </ul></li>
+<li>メールでお問い合わせいただいた場合：送られたメールは、開発者のGmail（Google LLC、米国）に直接届きます。</li>
+<li>保有期間：開発者のメールボックスでは、回答を終えた日から1年が過ぎると削除します。</li>
+<li>拒否する方法：お問い合わせを送らなければ処理しません。アプリのほかの機能はそのまま使えます。</li>
+</ul>
+<p class="q">写真はこの端末の中だけで処理されます</p>
+<p>撮影または読み込んだ写真と結果は、スマートフォン（iPhoneまたはAndroid）の中だけで処理・保管します。写真を処理するサーバーはないため、写真が端末の外に出ることはありません。</p>
+<p class="q">保管と削除</p>
+<p>作業中の写真は、ご自身で削除するまで端末に残ります。アプリの「すべて削除」を押すかアプリを削除すると、一緒に削除されます。まちがいノートに追加した問題と保管したノートは、ご自身で削除するかアプリを削除したときに削除されます。写真に保存したり、印刷・共有したりしたファイルは、選んだ場所にそのまま残ります。</p>
+<p class="q">アクセス権限</p>
+<p>カメラは問題集を撮るときだけ、写真ライブラリは写真を読み込むときや結果を保存するときだけ使います。</p>
+<p class="q">決済</p>
+<p>サブスクリプションの決済は、iPhoneではApple（App Store）、AndroidではGoogle（Google Play）が処理します。開発者は名前、メールアドレス、決済情報を受け取らず、ストアが提供する匿名の販売統計だけを見ることができます。</p>
+<p class="q">利用者の権利とその行使方法</p>
+<p>ご自身の情報の閲覧、訂正、削除、処理の停止を求めることができます。アプリの設定 › マイふでばこの記録から、記録の取得、この記録の削除、アカウントの削除をすぐに行えます。アプリを使えない場合は、<a href="delete.html">削除リクエストのページ</a>または下記のメールアドレスにご依頼ください。ご依頼は10日以内に処理し、結果をお知らせします。</p>
+<p class="q">破棄</p>
+<p>アカウントを削除するか、削除のご依頼を確認すると、サーバーのアカウントと記録をすぐに削除します。電子的な記録は復元できない方法で削除し、紙に印刷した個人情報はありません。端末の中の記録は、アプリを削除すると一緒に削除されます。</p>
+<p class="q">安全管理のための措置</p>
+<p>すべての通信を暗号化（HTTPS）しています。サーバーのルールにより、ご自身のアカウントの記録だけを読み書きできるようにし、正規アプリだけがアクセスできるようアプリを確認（App Check）しています。管理用アカウントには、開発者1人だけが2段階認証でアクセスします。</p>
+<p class="q">自動収集の仕組み</p>
+<p>アプリは、Cookie、広告識別子、位置情報を使いません。</p>
+<p class="q">子ども</p>
+<p>手書き消しゴムは保護者のためのアプリです。サインインバックアップは14歳以上の方だけが使え、14歳未満の方の個人情報は受け取りません。</p>
+<p class="q">個人情報保護責任者</p>
+<p>Seungbin Baik（開発者）・<a href="mailto:seungbin.baik@gmail.com">seungbin.baik@gmail.com</a></p>
+<p class="q">権利侵害の救済</p>
+<p>個人情報の侵害に関する申告や相談は、次の機関（いずれも韓国）に行えます：個人情報侵害申告センター（개인정보침해신고센터、privacy.kisa.or.kr、118）、個人情報紛争調停委員会（개인정보분쟁조정위원회、www.kopico.go.kr、1833-6972）、大検察庁（대검찰청、www.spo.go.kr、1301）、警察庁（경찰청、ecrm.police.go.kr、182）。</p>
+<p class="q" id="eu-ja">欧州連合・欧州経済領域・英国・スイスの利用者</p>
+<p>これらの地域のストアから入手したアプリでは、製品改善の統計の送信が最初からオフになっており、設定 › 製品の改善でご自身がオンにしたときだけ送ります（同意）。いつでもオフに戻せます。処理の根拠：サブスクリプションとサインインバックアップは契約の履行、お問い合わせはお問い合わせに回答するための正当な利益、統計は同意です。個人情報の管理者は、開発者のSeungbin Baik（seungbin.baik@gmail.com）です。アクセス、訂正、削除、処理の制限、処理への異議、データポータビリティを請求でき、お住まいの国の個人情報保護の監督機関に苦情を申し立てることができます。統計の合計は誰のものか分からないため、個人ごとにアクセスしたり削除したりすることはできません。情報は大韓民国（Google Cloud ソウル）に保存しており、大韓民国はEUの十分性認定を受けた国です。AppleとGoogleによる処理は、各社の標準契約条項に従います。保管期間は上記の各項目と同じです。</p>
+<p class="q">変更</p>
+<p>このポリシーを変更する場合は、新しい施行日とともにこのページとアプリでお知らせします。以前のポリシー：<a href="privacy-2026-10-28.html">2026年10月28日</a>・<a href="privacy-2026-10-27.html">2026年10月27日</a>・<a href="privacy-2026-10-25.html">2026年10月25日</a></p>
+<p class="q">お問い合わせ先</p>
+<p><a href="mailto:seungbin.baik@gmail.com">seungbin.baik@gmail.com</a></p>
+</section>
+<section id="zh-Hant" lang="zh-Hant">
+<h2>隱私權政策</h2>
+<p class="q">重點摘要</p>
+<p>不必註冊會員就能使用所有功能。照片和筆跡不會離開裝置。會離開裝置的只有以下三項。</p>
+<ul>
+<li><strong>產品改善統計</strong>：無法辨識個人的每月總數。可以在設定中關閉。</li>
+<li><strong>鉛筆盒紀錄登入備份（選用）</strong>：只有在你自己登入時，才會傳送帳號編號、電子郵件（使用 Google 登入時）和我的鉛筆盒紀錄。</li>
+<li><strong>聯絡我們</strong>：只有在你透過設定 › 聯絡我們主動傳送時，才會傳送訊息內容、接收回覆的電子郵件，以及 App 與裝置資訊。</li>
+</ul>
+<p class="q">產品改善統計</p>
+<p>為了改善 App、免費張數和訂閱說明，我們只按月加總下列項目的<strong>次數</strong>。</p>
+<ul>
+<li>傳送的內容：App 種類（iOS、Android）、發生的月份、首次開始統計時的免費使用量區間（0 張、1～3 張、4～9 張、已用完）、階段（開始、第一次成功、達到 3 張和 10 張、用完後嘗試處理新頁面、顯示訂閱畫面、按下訂閱按鈕、列印或分享或儲存、修整、加入錯題本、完成今日複習、直接作答、開啟今日複習提醒、再次開啟、回來擦除或完成今日複習或直接作答）、當下的免費使用量區間、從首次開始那天算起第幾天的區間（24 小時內、1～2 天、3～7 天、8～30 天、31 天以上）、你自己選的使用者類型（誰：家長、學生、老師或講師、其他／哪個階段：國小、國中、高中、大學或證照／未選擇）。每個階段只計算一次，再次開啟和回來使用則在每個天數區間各計算一次。</li>
+<li>不會傳送的內容：姓名、電子郵件、裝置識別碼、廣告識別碼、安裝識別碼，照片、筆跡和文件內容，付款收據，以及比月份更詳細的日期和時間。首次開始的日期只儲存在裝置上。</li>
+<li>你選的類型：答案留在裝置上，統計中只以上述類型欄位加總。可以隨時在 App 的設定 › 產品改善中變更。</li>
+<li>處理：只以共用計數器的形式加總到 Google Firebase（Cloud Firestore 首爾區域）。在防止竄改統計的 App 驗證（Firebase App Check、Apple App Attest、Google Play Integrity）過程中，Apple 和 Google 會處理驗證資料和 IP 位址等通訊資訊，這些處理可能在韓國境外進行。</li>
+<li>關閉：可以隨時在 App 的設定 › 關於 App › 產品改善中關閉。從歐盟、歐洲經濟區、英國、瑞士商店下載的 App，一開始就是關閉的（<a href="#eu-zh-Hant">見下方</a>）。關閉後，尚未傳送的紀錄會立即刪除，App 功能仍可照常使用。訂閱期間不會傳送。</li>
+<li>時間：伺服器上只留下每個月的總數，以及總數最後一次變更的時間。App 會把首次開始後 24 小時內的紀錄，以及再次開啟或回來使用的紀錄，最快在 1～3 分鐘後傳送；其餘紀錄則在數小時到數天後隨機傳送。伺服器上留下的變更時間不含任何可辨識身分的資訊。</li>
+<li>保存：每月總數不含任何可辨識身分的資訊，會在服務營運期間保存，不再需要的月份會刪除。未能傳送的紀錄在裝置上超過 30 天後會刪除。</li>
+</ul>
+<p class="q" id="backup-zh-Hant">鉛筆盒紀錄登入備份 — 個人資料蒐集與使用說明（選用）</p>
+<p>為了讓你換手機或重新安裝 App 後仍能延續鉛筆盒紀錄，<strong>只有在你自己登入時</strong>才會處理下列資訊。不登入就不會傳送任何資訊，App 的其他功能也能照常使用。</p>
+<ul>
+<li>處理目的：鉛筆盒紀錄的備份與復原、合併同一帳號的紀錄、處理帳號刪除請求。</li>
+<li>處理項目：帳號編號（登入服務產生的識別碼）、登入方式（Apple、Google）、使用 Google 登入時的電子郵件地址、我的鉛筆盒紀錄（拿到印章的日子、連續紀錄中斷的日子、鉛筆盒朋友、重練和攻克的題數、最長連續紀錄、紀錄建立和變更的時間）。使用 Google 登入時，姓名和大頭貼網址可能會一起傳來，但不會使用。使用 Apple 登入時，不會收到電子郵件和姓名。</li>
+<li>不會傳送的內容：照片、筆跡、錯題本的題目、付款資訊、免費張數、出生年月。</li>
+<li>處理依據：在提供你所要求的備份功能所需的範圍內處理（개인정보 보호법〔韓國個人資訊保護法〕第 15 條第 1 項第 4 款）。登入時會請你確認這份說明。</li>
+<li>年齡：僅限滿 14 歲以上使用。登入前會用出生年月確認，該數值不會儲存。我們不收集未滿 14 歲兒童的個人資料。</li>
+<li>保存期間：直到刪除帳號為止。刪除帳號後，伺服器上的帳號和紀錄會立即刪除，不另外保留備份副本。</li>
+</ul>
+<p class="q">委託處理與境外傳輸</p>
+<p>登入備份透過 Google 的 Firebase 營運。部分帳號資訊會在美國處理。</p>
+<ul>
+<li>接收者：Google LLC（聯絡：<a href="https://support.google.com/policies/contact/general_privacy_form">Google 隱私權詢問</a>）</li>
+<li>委託業務與地點：登入和帳號管理（Firebase Authentication，美國）、鉛筆盒紀錄保存（Cloud Firestore，首爾區域）</li>
+<li>傳輸項目：帳號編號、登入方式、電子郵件（使用 Google 登入時）、Google 登入傳來的姓名和大頭貼網址、我的鉛筆盒紀錄</li>
+<li>時間與方式：登入和備份時，透過加密的網路連線（HTTPS）</li>
+<li>保存期間：直到刪除帳號為止</li>
+<li>拒絕方式：不登入或刪除帳號即可。這樣只是無法使用紀錄備份，其他功能照常。</li>
+<li>正版 App 驗證：為了防止竄改統計和備份，我們使用 Firebase App Check（Apple App Attest、Google Play Integrity）。Apple Inc. 和 Google LLC 會處理驗證資料和 IP 位址等通訊資訊，這些處理可能在韓國境外進行。</li>
+</ul>
+<p class="q" id="contact-zh-Hant">聯絡我們</p>
+<p>只有在你透過 App 的設定 › 聯絡我們主動傳送時，才會處理下列資訊。</p>
+<ul>
+<li>處理目的：回覆問題、確認和解決錯誤。</li>
+<li>處理項目：訊息內容、接收回覆的電子郵件（有留下時）、App 版本、裝置型號、OS 版本。用電子郵件聯絡時，為寄件的電子郵件地址和郵件內容。</li>
+<li>處理依據：在回覆你所提出的問題所需的範圍內處理（개인정보 보호법〔韓國個人資訊保護法〕第 15 條第 1 項第 4 款）。</li>
+<li>處理路徑與境外傳輸：經過正版 App 驗證（Firebase App Check）後，依下列順序傳送。傳送時使用加密連線（HTTPS）。訊息轉送伺服器不會儲存訊息。
+  <ul>
+  <li>Cloudflare, Inc.（美國）— 訊息轉送。為了防止過於頻繁的傳送，會暫時使用 IP 位址。聯絡：<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隱私權政策</a></li>
+  <li>Plus Five Five, Inc.（Resend，美國）— 郵件寄送。可能會依其自身政策保存寄送紀錄。聯絡：support@resend.com</li>
+  <li>Google LLC（Gmail，美國）— 開發者的信箱。聯絡：<a href="https://support.google.com/policies/contact/general_privacy_form">Google 隱私權詢問</a></li>
+  </ul></li>
+<li>用電子郵件聯絡時：寄出的郵件會直接送到開發者的 Gmail（Google LLC，美國）。</li>
+<li>保存期間：在開發者的信箱中，自回覆完成之日起滿 1 年後刪除。</li>
+<li>拒絕方式：不傳送訊息就不會處理。App 的其他功能仍可照常使用。</li>
+</ul>
+<p class="q">照片只在這台裝置上處理</p>
+<p>拍攝或匯入的照片和結果，只在手機（iPhone 或 Android）上處理和保存。沒有處理照片的伺服器，因此照片不會離開裝置。</p>
+<p class="q">保存與刪除</p>
+<p>處理中的照片會留在裝置上，直到你自己刪除。按下 App 的「全部刪除」或刪除 App 時會一起刪除。加入錯題本的題目和收藏的錯題本，會在你自己刪除或刪除 App 時刪除。儲存到相簿、列印或分享的檔案，會照原樣留在你選擇的地方。</p>
+<p class="q">存取權限</p>
+<p>相機只在拍攝習題時使用，相簿只在匯入照片或儲存結果時使用。</p>
+<p class="q">付款</p>
+<p>訂閱付款在 iPhone 上由 Apple（App Store）處理，在 Android 上由 Google（Google Play）處理。開發者不會收到姓名、電子郵件和付款資訊，只能看到商店提供的匿名銷售統計。</p>
+<p class="q">使用者的權利與行使方式</p>
+<p>你可以要求查閱、更正、刪除你的資訊，或要求停止處理。在 App 的設定 › 我的鉛筆盒紀錄中，可以直接取得紀錄、刪除這份紀錄或刪除帳號。如果無法使用 App，請透過<a href="delete.html">刪除請求頁面</a>或下方的電子郵件提出請求。我們會在 10 天內處理請求並通知結果。</p>
+<p class="q">銷毀</p>
+<p>刪除帳號或確認刪除請求後，伺服器上的帳號和紀錄會立即刪除。電子紀錄會以無法復原的方式刪除，也沒有列印成紙本的個人資料。裝置上的紀錄會在刪除 App 時一起刪除。</p>
+<p class="q">安全維護措施</p>
+<p>所有通訊都經過加密（HTTPS）。透過伺服器規則，只允許讀寫自己帳號的紀錄，並驗證 App（App Check），只讓正版 App 存取。管理帳號只有開發者一人，並以兩步驟驗證存取。</p>
+<p class="q">自動蒐集機制</p>
+<p>App 不使用 Cookie、廣告識別碼和位置資訊。</p>
+<p class="q">兒童</p>
+<p>手寫橡皮擦是為家長設計的 App。登入備份僅限滿 14 歲以上使用，我們不收集未滿 14 歲兒童的個人資料。</p>
+<p class="q">個人資料保護負責人</p>
+<p>Seungbin Baik（開發者） · <a href="mailto:seungbin.baik@gmail.com">seungbin.baik@gmail.com</a></p>
+<p class="q">權益受損的救濟</p>
+<p>關於個人資料侵害的申報或諮詢，可以向下列機關提出：개인정보침해신고센터（個人資訊侵害申報中心，privacy.kisa.or.kr，118）、개인정보분쟁조정위원회（個人資訊糾紛調解委員會，www.kopico.go.kr，1833-6972）、대검찰청（韓國大檢察廳，www.spo.go.kr，1301）、경찰청（韓國警察廳，ecrm.police.go.kr，182）。</p>
+<p class="q" id="eu-zh-Hant">歐盟、歐洲經濟區、英國、瑞士的使用者</p>
+<p>從這些地區的商店下載的 App，產品改善統計傳送一開始就是關閉的，只有在你到設定 › 產品改善中自行開啟時才會傳送（同意）。你可以隨時再次關閉。處理依據：訂閱和登入備份為履行契約，聯絡我們為回覆問題的正當利益，統計為同意。個人資料控管者是開發者 Seungbin Baik（seungbin.baik@gmail.com）。你可以要求查閱、更正、刪除、限制處理、反對處理和資料可攜，也可以向居住國家的個人資料保護監管機關提出申訴。統計總數無法辨識屬於誰，因此無法按個人查閱或刪除。資料儲存在大韓民國（Google Cloud 首爾），大韓民國已獲得歐盟的適足性認定。Apple 和 Google 的處理依照各公司的標準契約條款。保存期間與上述各項相同。</p>
+<p class="q">變更</p>
+<p>本政策變更時，會連同新的施行日期在本頁面和 App 中公告。先前的政策：<a href="privacy-2026-10-28.html">2026 年 10 月 28 日</a> · <a href="privacy-2026-10-27.html">2026 年 10 月 27 日</a> · <a href="privacy-2026-10-25.html">2026 年 10 月 25 日</a></p>
+<p class="q">聯絡方式</p>
+<p><a href="mailto:seungbin.baik@gmail.com">seungbin.baik@gmail.com</a></p>
+</section>
 <footer><p><a href="./">고객 지원 · Support</a></p></footer>
-</div></body></html>
+</div><script>
+// 주소에 #언어가 없으면 브라우저 언어의 절로 (일본어·중국어·그 밖의 언어 = 영어). 한국어는 맨 위 그대로.
+(function(){if(location.hash)return;var l=(navigator.language||"").toLowerCase(),t=l.indexOf("ja")===0?"ja":l.indexOf("zh")===0?"zh-Hant":l.indexOf("ko")===0?"":"en";var e=t&&document.getElementById(t);if(e)e.scrollIntoView();})();
+</script>
+</body></html>
